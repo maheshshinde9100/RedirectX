@@ -19,6 +19,10 @@ public class Base62 {
     
     public static long decode(String str) {
         long num = 0;
+        for(int i = 0; i < str.length(); i++)
+        {
+            num = num * BASE + ALPHABET.indexOf(str.charAt(i));
+        }
         return num;
     }
     
